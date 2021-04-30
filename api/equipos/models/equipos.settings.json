@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "equipos",
+  "info": {
+    "name": "equipos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "fotos": {
+      "type": "integer"
+    }
+  }
+}
